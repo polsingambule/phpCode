@@ -10,31 +10,6 @@ for( $polsing=0; $polsing <= 300; $polsing += 10 ){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 exit();
 $salman =0;
 

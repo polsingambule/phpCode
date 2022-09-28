@@ -1,12 +1,5 @@
 <?php
-
-
-
-
 exit(); 
-
-
-
 
 
 echo "<b><mark>Function</mark></b><br><br>";

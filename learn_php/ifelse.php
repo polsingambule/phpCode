@@ -7,7 +7,7 @@
 		//$saving -= $withdrawal;
 		echo "<b>$withdrawal</b>"," Rupees Have Been Withdrawn Successfully";
 	}else{
-		echo "Your Accound Not Correct";
+		echo "Your ";
 	}
 ?>
 

@@ -1,4 +1,35 @@
 <?php 
+
+$cars = array("YOGRAJ", "AMBULE", "POLSING", "GONDIA");
+
+echo count($cars);
+
+echo "<br>";
+echo "My Name is " . $cars[2] . ", ". $cars[0] . " , " . $cars[1]." , ".$cars[3];
+
+
+echo "<br><br><br><br>😜	..............................<br><br><br><br>";
+
+
+
+
+
+
+$names = array("Polsing", "Ram", "Mahendra", "Praful", "Talha","Polsing", "Ram", "Mahendra", "Praful", "Talha");
+$arrlength = count($names);
+
+echo count($names);
+echo "<br>";
+
+for($demmy = 0; $demmy < $arrlength; $demmy++) {
+  echo $names[$demmy];
+  echo "<br>";
+}
+
+
+exit();
+
+
 	$colors = array("Red",22,"Blue",12.50);
 	
 	/*
@@ -138,7 +169,7 @@ echo "<br>";
 
 //***************************** Multidimensional Associative Array
 echo "<br><br><br>......................................<br>";
-
+/*
 $marks[
 		"POLSING" => [
 			"English" => 75,
@@ -190,4 +221,6 @@ echo "</table>";
 echo "<pre>";
 	print_r($marks);
 echo "</pre>";
+
+*/
 ?>
