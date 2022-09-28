@@ -10,7 +10,8 @@ for( $polsing=0; $polsing <= 300; $polsing += 10 ){
 }
 
 
-exit();
+echo "<br><br><br>";
+
 $salman =0;
 
 while($salman <= 300){
@@ -18,9 +19,10 @@ echo $salman."<br>";
 	$salman = $salman + 10;
 }
 
-
+echo "<br><br><br>";
 
 echo "..........First 10 Even numbers<br>";
+
 
 $suraj = 2;
 
@@ -28,6 +30,9 @@ while($suraj <= 10){
 	echo $suraj."<br>";
 	$suraj = $suraj + 2;
 }
+
+
+echo "<br><br><br>";
 
 echo "........First 10 Odd numbers<br>";
 
@@ -38,6 +43,8 @@ echo $salman."<br>";
 	$salman = $salman + 2;
 }
 
+
+echo "<br><br><br>";
 echo "..........Write a program to print first 10 integers and their squares using while loop.<br>";
 
 $num = 1;
@@ -45,6 +52,8 @@ while ($num <= 10) {
 	echo  $num**2 . "<br>";
 	$num = $num+1;
 }
+
+echo "<br><br><br>";
 
 echo "........ Write while loop statement to print the following series:
 10, 20, 30 … … 300";
@@ -55,10 +64,9 @@ while($salman <= 300){
 echo $salman."<br>";
 	$salman = $salman + 10;
 }
+echo "<br><br><br>";
 
 echo "........ Write For loop<br>*<br>**<br>***<br>****<br>*****<br><br><br>";
-
-
 
 
  for ($ram="";$ram<=75;$ram++){

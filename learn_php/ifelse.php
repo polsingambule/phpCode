@@ -1,44 +1,11 @@
-<?php
-	$saving = 5000;
-	$withdrawal = 10000;
-	
-	
-	if($withdrawal <= $saving){
-		//$saving -= $withdrawal;
-		echo "<b>$withdrawal</b>"," Rupees Have Been Withdrawn Successfully";
-	}else{
-		echo "Your ";
-	}
-?>
-
-
-
-
 
 <?php
-
-
-	
-	
-/*
-if( $status === "process" ){
-	echo "Your Order Is In ".$status;
-}elseif( $status === "in transt"){
-	echo "Your Order IS ".$status;
-}elseif($status === "delivery"){
-	echo "Your Order Is ".$status;
-}else{
-	echo "Same Error Found";
-}
-*/
-
-
-exit();
- 
+ //==== Start
 	$userlogin = 1;
 
 	if( $userlogin ){ 
 ?>
+
 	<h2> Welcome User </h2>
 	<ul>
 		<li><a href="" >My Account</a></li>
@@ -50,76 +17,15 @@ exit();
 		<h2>Welcome Guest</h2>	
 		<p>You Are Not LogIn, Please <a href="#">Click Here</a>To LogIn...</p>
 		
-	<?php } ?>
+	<?php } 
+	
+	 //==== End
+	?>
 
 
 <?php
 
-// Tasks If if...elseif...else
 
-//1. Example
-//1. Find user is Eligible for Vote or Not
-
-	
-    $name = "Polsing";
-    $age = 18;
-	
-	if ($age >= 21) {
-        echo $name . ", You Are Eligible For Vote";
-    } else {
-        echo $name . ", You Are Not Eligible For Vote. ";
-    }
-
-echo "<br><br>";
-
-//2. Example
-//$a = 52; $b = 89; $c = 25; Find the smaller Number
-  
-$a = 52;
-$b = 89;
-$c = 25;
-
-if( $c < $a ){
-	if( $c < $b ){
-		echo $c."Smaller Number";
-	}else{
-		echo $c."Is Not Smaller Number Within".$b;
-	}
-}else{
-	echo$c."Is Not Samller Number Within".$a;
-}
-
-echo "<br><br>";
-
-//3. Example
-//3.  if $a = 20 is not equal to $b= 50 echo not match otherwise it match.
-
-	$a = 30;
-	$b = 50;
-	
-	if ($a != $b){
-		echo "Not Match";
-	}else{
-		echo "Match";
-	}
-
-echo "<br><br>";
-
-//4. Example
-
-$status = "delivery";
-
-if( $status === "process" ){
-	echo "Your Order Is In ".$status;
-}elseif( $status === "in transt"){
-	echo "Your Order IS ".$status;
-}elseif($status === "delivery"){
-	echo "Your Order Is ".$status;
-}else{
-	echo "Same Error Found";
-}
-
-echo "<br><br>";
 
 // If if...elseif...else Advance
 

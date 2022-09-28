@@ -1,4 +1,43 @@
-<?php 
+<?php
+
+echo "<mark><b>...PHP Indexed Arrays...</b></mark><br><br>";
+
+$index = array("Hey", "How Are", "You");
+$arrlength = count($index);
+
+for($x = 0; $x < $arrlength; $x++) {
+  echo $index[$x];
+  echo "<br>";
+}
+
+echo "<br><br><br><mark><b>...PHP Associative Arrays...</b></mark><br><br>";
+
+$emp = array("Polsing"=>"Good", "Sabha"=>"Bad", "Ram"=>"Good");
+
+foreach($emp as $x => $x_value) {
+  echo "Emp " . $x . ", is " . $x_value;
+  echo "<br>";
+}
+
+
+echo "<br><br><br><mark><b>...PHP Multidimensional Arrays...</b></mark><br><br>";
+
+
+ $students = array(
+	array('Rahul' , 1250 , "12th"),
+	array('Talha' , 5120 , "10th"),
+	array('Ram' , 2585 , "9th"),
+	array('Sandip' , 9625 , "8th"),
+	array('Tez' , 2855 , "7th"),
+	array('Kumar' , 8555 , "6th")
+);
+
+echo $students[2][0];
+
+
+echo "<br><br><br><mark><b>...Practice Arrays...</b></mark><br><br>";
+
+
 
 $cars = array("YOGRAJ", "AMBULE", "POLSING", "GONDIA");
 
@@ -25,10 +64,6 @@ for($demmy = 0; $demmy < $arrlength; $demmy++) {
   echo $names[$demmy];
   echo "<br>";
 }
-
-
-exit();
-
 
 	$colors = array("Red",22,"Blue",12.50);
 	

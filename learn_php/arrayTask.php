@@ -35,18 +35,13 @@ Delete an element from the above array. After deleting the element, integer keys
 echo '<br><br><br>';
 
  $x = array(1, 2, 3, 4, 5);
- 
-foreach ($x as $valueV) {
-	unset($x[1]);
-	echo ' Number is  '.$valueV.'<br/>';	
-}
-/*
-	echo $x[0].' ';
-	echo $x[1].' ';
-	echo $x[2].' ';
-	echo $x[3].' ';
-	echo $x[4].' ';
-*/
+	echo '<pre>';
+	print_r($x);
+
+unset($x[3]);
+echo '<pre>';
+print_r($x);
+
 
 /*
 $color = array(4 => 'white', 6 => 'green', 11=> 'red');
