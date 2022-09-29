@@ -10,6 +10,18 @@ for($x = 0; $x < $arrlength; $x++) {
   echo "<br>";
 }
 
+ echo "<br>";
+
+$salman = ['red','20.5','blue','yellow'];
+
+echo '<ul>';
+for ($i = 0; $i < 4; $i++){
+	echo "<li> $salman[$i] </li>";
+}  
+echo '</ul>';
+
+
+
 echo "<br><br><br><mark><b>...PHP Associative Arrays...</b></mark><br><br>";
 
 $emp = array("Polsing"=>"Good", "Sabha"=>"Bad", "Ram"=>"Good");
@@ -18,6 +30,33 @@ foreach($emp as $x => $x_value) {
   echo "Emp " . $x . ", is " . $x_value;
   echo "<br>";
 }
+
+$khanAge = array(
+				'bill' => 25,
+				'steta' => 55,
+				'elon' => 85
+			);
+echo $khanAge['bill']."<br>";
+echo $khanAge['steta']."<br>";
+echo $khanAge['elon']."<br>";
+
+////////////////
+echo '<br>';
+
+$khanAgeR =[
+				'bill' => 70.5,
+				'steta' => 'polsing',
+				5 => 87
+			];
+			
+	$khanAgeR [5] = 00;
+	echo '<pre>';		
+		print_r($khanAgeR); //use this = var_dump
+	echo '</pre>';
+	
+echo $khanAgeR['bill']."<br>";
+echo $khanAgeR['steta']."<br>";
+echo $khanAgeR[5]."<br>";
 
 
 echo "<br><br><br><mark><b>...PHP Multidimensional Arrays...</b></mark><br><br>";
@@ -35,227 +74,324 @@ echo "<br><br><br><mark><b>...PHP Multidimensional Arrays...</b></mark><br><br>"
 echo $students[2][0];
 
 
-echo "<br><br><br><mark><b>...Practice Arrays...</b></mark><br><br>";
-
-
-
-$cars = array("YOGRAJ", "AMBULE", "POLSING", "GONDIA");
-
-echo count($cars);
-
-echo "<br>";
-echo "My Name is " . $cars[2] . ", ". $cars[0] . " , " . $cars[1]." , ".$cars[3];
-
-
-echo "<br><br><br><br>😜	..............................<br><br><br><br>";
-
-
-
-
-
-
-$names = array("Polsing", "Ram", "Mahendra", "Praful", "Talha","Polsing", "Ram", "Mahendra", "Praful", "Talha");
-$arrlength = count($names);
-
-echo count($names);
-echo "<br>";
-
-for($demmy = 0; $demmy < $arrlength; $demmy++) {
-  echo $names[$demmy];
-  echo "<br>";
-}
-
-	$colors = array("Red",22,"Blue",12.50);
+$teztecchEmp = [
+		[1,"Muneer Ahmad","Web Developer",50000],
+		[2,'Awan Rajja','FontEnd Developer',25000],
+		[3,'Nigam Shalu','Telly Comunication',15000],
+		[4,'Sabha Shekh','Time-Pass',78000],
+		[5,'Keyur bisen','Sortware Developer',96000],
+		[6,'Vishal Agrawal','Local Developer',60000]
+	];
 	
 	/*
-	echo $colors[0]."<br>";
-	echo $colors[1]."<br>";
-	echo $colors[2]."<br>";
-	echo $colors[3]."<br>";
-	
+	echo $teztecchEmp[0][0]. ' ';
+	echo $teztecchEmp[0][1]. ' ';
+	echo $teztecchEmp[0][2]. ' ';
+	echo $teztecchEmp[0][3]. ' ';
+	echo '<br>';
+	echo $teztecchEmp[1][0]. ' ';
+	echo $teztecchEmp[1][1]. ' ';
+	echo $teztecchEmp[1][2]. ' ';
+	echo $teztecchEmp[1][3]. ' ';
 	*/
-	echo "<pre>";
-	print_r($colors);
-	echo "</pre>";
-	
-//*****************************
-	
-	$days = array("One","Two","Three","Four","Five");
-	
-	for($i = 0; $i < 4; $i++){
-		echo $days[$i]. "<br>";
-	};
-	
-//*****************************
-
-	$number = array("-Ones","-Twos","-Threes","-Fours","-Fives");
-	
-	echo "<ul>";
-	for($p = 0; $p < 4; $p++){
-		echo "<li> $number[$p]. </li>";
-	};
-	
-	echo "</ul>";
-	
-//*****************************Associative Array
-echo "<br><br><br>......................................<br>";
-
-	$age = array(
-	"sabha" => 42,
-	"talha" => 52,
-	"suraj" => 25,
-	"polsing" => 21,
-	); // [] Use This
-	
-	echo "<pre>";
-	print_r($age); // var_dump Use This
-	echo "</pre>";
-	
-	echo $age ["sabha"]. "<br>";
-	echo $age ["talha"]. "<br>";
-	echo $age ["suraj"]. "<br>";
-	echo $age ["polsing"];
-	
-//**********
-
-	$praful = [
-		152 => "good",
-		"sabha" => 52.5,
-		3342 => 25,
-		423 => 21	
-	];
-	
-	echo "<pre>";
-		var_dump($praful); // var_dump Use This
-	echo "</pre>";
-	
-	echo $praful [152]. "<br>";
-	echo $praful ["sabha"]. "<br>";
-	echo $praful [3342]. "<br>";
-	echo $praful [423];
-	
-	
-//***************************** Multidimensional Arrays
-echo "<br><br><br>......................................<br>";
-	
-	$emp =[
-		[1, "Dimple", "UI Developer", 50000],
-		[1, "Harsh", "UX Developer", 20000],
-		[1, "Prem", "Software Developer", 30000],
-		[1, "Mansi", "Grapics Developer", 40000],
-		[1, "Nikhil", "Backend Developer", 10000],
-	];
-	
-	echo $emp[0][0] . " ";
-	echo $emp[0][1] . " ";
-	echo $emp[0][2] . " ";
-	echo $emp[0][3] . " ";
-	
-	echo "<br>";
-	
-	echo $emp[1][0] . " ";
-	echo $emp[1][1] . " ";
-	echo $emp[1][2] . " ";
-	echo $emp[1][3] . " ";
-	
-	echo "<pre>";
-		print_r($emp);
-	echo "</pre>";
-
-//*****************************
-echo "<br>";
-
-
-	$raghav = [
-			[1, "Ram", "AI Developer", 50000],
-			[2, "Vishal", "PA Developer", 20000],
-			[3, "Tez", "SCO Developer", 30000],
-			[4, "Krishna", "KO Developer", 40000],
-			[5, "Mahendra", "BA Developer", 10000],
-		];
-
-	
-	echo "<table border='2px' cellpadding= '5px' cellspacing = '0'>";
-	
-		echo "<tr>
-			<th>Emp Id.</th>
-			<th>Emp Name.</th>
-			<th>Emp Designation.</th>
-			<th>Emp salary.</th>
-		</tr>";
-		
-	foreach($raghav as $v1){
-		echo "<tr>";
-		foreach($v1 as $v2){
-			echo "<td> $v2 </td>";
-		};
-		echo "</tr>";
-	};
-	echo "<table>";
-/*
 	for($row = 0; $row < 4; $row++){
 		for($col = 0; $col < 4; $col++){
-			echo $raghav[$row][$col];
+			echo $teztecchEmp[$row][$col].' ';
 		}
-		echo "<br>";
+		echo '<br>';
 	}
-*/
+echo '<br>';echo '<br>';
+
+echo '<table border="2px" cellpadding="5px" cellspacing="0px">';
+
+echo "<tr>
+		<th>Emp id</th>
+		<th>Emp Name</th>
+		<th>Emp Designation</th>
+		<th>Emp Salary</th>
+	</tr>
+";
+
+foreach($teztecchEmp as $v1){
+	echo '<tr>';
+	foreach( $v1 as $v2){
+		echo "<td> $v2 </td>";
+	}
+}	echo '</tr>';
+
+echo '</table>';
 
 
-//***************************** Multidimensional Associative Array
-echo "<br><br><br>......................................<br>";
-/*
-$marks[
-		"POLSING" => [
-			"English" => 75,
-			"Marathi" => 67,
-			"Biology" => 61,
-			"Physics" => 89
+echo '<br><br><mark><b>...PHP Foreach Loop...</b></mark><br>';
+//PHP Foreach Loop
+
+$bopche = array(
+	'mahendra',
+	'gita',
+	'dipali',
+	'sanu',
+	'hema',
+	'gauri',
+	);
+foreach($bopche as $value ){
+	echo $value. '<br>';
+};
+
+
+echo '....................................<br>';
+
+$associative = array(
+	'New-mahendra Age ' => 23 ,
+	'New-gita Age ' => 28,
+	'New-dipali Age ' => 43,
+	'New-sanu Age ' => 83,
+	'New-hema Age ' => 13,
+	'New-gauri Age ' => 93,
+	);
+	
+echo '<ul>';
+foreach($associative as $keyValue => $associative_value ){
+	echo "<li> $keyValue =  $associative_value </li>";
+};
+echo '</ul>';
+
+
+echo "<br><br><br><mark><b>...PHP Multidimensional Associative Array ...</b></mark><br><br>";
+//= PHP Multidimensional Associative Array 
+
+$studentsMarks = [
+		"Polsing" => [
+				"English" => 89,
+				"Marathi" => 19,
+				"Biology" => 59,
+				"Physics" => 89,
+				"Chemistry" => 69
 		],
-		"RAM" => [
-			"English" => 78,
-			"Marathi" => 36,
-			"Biology" => 49,
-			"Physics" => 61
+		"Nikhil" => [
+				"English" => 65,
+				"Marathi" => 65,
+				"Biology" => 84,
+				"Physics" => 49,
+				"Chemistry" => 34
 		],
-		"TALHA" => [
-			"English" => 88,
-			"Marathi" => 77,
-			"Biology" => 66,
-			"Physics" => 35
+		"Ashwin" => [
+				"English" => 87,
+				"Marathi" => 65,
+				"Biology" => 32,
+				"Physics" => 54,
+				"Chemistry" => 65
 		],
-		"NAINA" => [
-			"English" => 99,
-			"Marathi" => 44,
-			"Biology" => 55,
-			"Physics" => 68
+		"Suraj" => [
+				"English" => 55,
+				"Marathi" => 33,
+				"Biology" => 44,
+				"Physics" => 99,
+				"Chemistry" => 19
+		],
+		"Harsh" => [
+				"English" => 89,
+				"Marathi" => 89,
+				"Biology" => 89,
+				"Physics" => 89,
+				"Chemistry" => 89
 		]
 ];
-
-echo "<table border='2px' cellpadding= '5px' cellspacing = '0'>
+echo '<table  border="2px" cellpadding="5px" cellspacing="0px">
 	<tr>
 		<th>Student Name</th>
 		<th>English</th>
 		<th>Marathi</th>
 		<th>Biology</th>
 		<th>Physics</th>
+		<th>Chemistry</th>
+		<th>Total Marks</th>
 	</tr>
-";
-foreach($marks as $key => $value1){
+';
+$total1 = 0;
+$total2 = 0;
+$total3 = 0;
+$total4 = 0;
+$total5 = 0;
+$i = 1;
+foreach($studentsMarks as $key => $v1){
 	echo "<tr>
 		<td>$key</td>";
-		foreach($value1 as $value2){
-			echo "<td>$value2 </td>";
-		}
-	echo "</tr>";
+		foreach($v1 as $v2){?>
+			
+			<td> <?php echo $v2;
+						$total2 = $total2 + $v2;	?> </td>
+			
+			
+		<?php }?>
+		<td> <?php echo $total2; ?> </td>
+		<?php 
+	 echo "</tr>";
 }
+echo "</table>";
 
+echo '<pre>';
+	print_r ($studentsMarks);
+echo '</pre>';
+
+echo "<br><br><br><mark><b>...PHP Foreach Loop with List...</b></mark><br><br>";
+//= PHP Foreach Loop with List
+
+$data = [
+		[1, 'Harsha',"Good",'Positive'],
+		[2, 'Trupti',"Very Good",'Negative'],
+		[3, 'Divya',"Bad",'Negative'],
+		[4, 'Dimple',"Excilent",'Positive']
+];
+
+echo "<table border='2px' cellpadding='5px' cellspacing='0px'>
+	<tr>
+		<th>No.</th>
+		<th>Name</th>
+		<th>Responce</th>
+		<th>Nothing</th>
+	</tr>	
+";
+foreach($data as list($id,$what,$responce,$nothing)){
+	echo "<tr><td>$id</td> <td>$what</td> <td>$responce</td><td>$nothing</td></tr>";
+}
 echo "</table>";
 
 
-echo "<pre>";
-	print_r($marks);
-echo "</pre>";
+echo '........................................................................<br>';
 
-*/
+$demmy = [
+			[
+				'id' => 1,
+				'Name' => 'Sabha',
+				'designation' => 'Manager',
+				'Salary' => 20.000
+			],
+			[
+				'id' => 2,
+				'Name' => 'Keyur',
+				'designation' => 'Owner',
+				'Salary' => '2 Lakh'
+			],
+			[
+				'id' => 3,
+				'Name' => 'Minal',
+				'designation' => 'Hr',
+				'Salary' => 80.000
+			],
+			[
+				'id' => 4,
+				'Name' => 'Karishma',
+				'designation' => 'Actor',
+				'Salary' => 85.000
+			],
+			[
+				'id' => 5,
+				'Name' => 'Ravi',
+				'designation' => 'Driver',
+				'Salary' => 10.000
+			]
+];
+
+echo "<table border='2px' cellpadding='5px' cellspacing='0px'>
+	<tr>
+		<th>First</th>
+		<th>Second</th>
+		<th>thrd</th>
+		<th>Salary</th>
+	</tr>	
+";
+foreach($demmy as list("id" => $first, "Name" =>$second, "designation" =>$thrd, "Salary" =>$forth)){
+	echo "<tr><td>$first</td> <td>$second</td> <td>$thrd</td> <td>$forth</td></tr>";
+}
+echo "</table>";
+
+
+echo "<br><br><br><mark><b>---- PHP Array Function ----</b></mark>";
+echo "<br><br><mark><b>...PHP Array Count & Sizeof Function...</b></mark><br><br>";
+
+$names = array('Salman','Virat','Karishma','Talha');
+
+echo count($names);
+echo "<br>";
+
+echo '<pre>';
+print_r (array_count_values ($names));
+echo '</pre>';
+
+echo '<br>....................................<br>';
+
+$names = array('Salman','Virat','Karishma','Talha');
+
+echo sizeof($names);
+
+echo '<br>....................................<br>';
+
+$food = array(
+			'Fruits' => array('Orange', 'Banana', 'Apple'),
+			'Veggie' => array('Carrot', 'Collard', 'Pea')
+		);
+echo sizeof($food['Fruits'],1); //use this count
+
+
+echo '<br>....................................<br>';
+
+$leo = array('Salman','Virat','Karishma','Talha');
+
+$len = count($leo);
+
+for($pol = 0; $pol < $len; $pol++){
+	echo $leo[$pol]. "<br>";
+}
+
+echo "<br><br><br><mark><b>...PHP Array In_array & Array_search Function...</b></mark><br><br>";
+
+$bads = array('Shilpa', 'Sapna', '55' ,'Raj','Rani');
+
+
+if(in_array(55, $bads)){
+	echo 'Find Successfully';
+}else{
+	echo 'Can"t Find';
+}
+
+echo '<br>....................................<br>';
+
+
+$numNames = array(array('p','o'),array('l','s','i'),'n','g');
+
+
+if(in_array(array('p','o'), $numNames)){
+	echo 'Find Successfully';
+}else{
+	echo 'Can"t Find';
+}
+
+echo '<br>....................................<br>';
+
+$good = array('Name1', 'Name2', 'Name3' ,'Name4','Name5');
+
+echo array_search('Name4',$good);
+
+echo '<br>....................................<br>';
+
+$goods = array('a' => 'Name1','b' => 'Name2','c' => 'Name3' ,'d' => 'Name4','e' => 'Name5');
+
+echo array_search('Name1',$goods);
+
+
+echo "<br><br><br><mark><b>...PHP Array_replace & Array_replace_recursive...</b></mark><br><br>";
+
+$first = ['orange','apple','banana','grapes','kivi','mango'];
+$second = ['carrot','pea'];
+$colors = ['red','yellow','blue'];
+
+
+$newArray = array_replace($first, $second, $colors);
+echo "<br>";
+$newArray = array_replace_recursive($first, $second, $colors);
+echo '<pre>';
+	print_r($newArray);
+echo '</pre>';
+
+echo "<br><br><br><mark><b>...PHP Array_Reduce Function...</b></mark><br><br>";
 ?>
