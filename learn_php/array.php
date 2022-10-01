@@ -393,5 +393,244 @@ echo '<pre>';
 	print_r($newArray);
 echo '</pre>';
 
-echo "<br><br><br><mark><b>...PHP Array_Reduce Function...</b></mark><br><br>";
-?>
+echo "<br><br><br><mark><b>...PHP Array_pop & Array_push...</b></mark><br><br>";
+
+$pop = ["Hey1","Hey2","Hey4"];
+
+array_pop($pop);
+
+array_push($pop,"Hey3","Hey5");
+
+echo "<pre>";
+	print_r($pop);
+echo "</pre>";
+
+
+
+echo "<br><br><br><mark><b>...PHP Array_shift & Array_unshift...</b></mark><br><br>";
+
+$shift = ["Hello1","Hello2","Hello3","Hello4"];
+
+array_shift($shift);
+
+array_unshift($shift,"Hello0","Hello");
+
+echo "<pre>";
+	print_r($shift);
+echo "</pre>";
+
+
+echo "<br><br><br><mark><b>...PHP Array_Merge & Array_Combine...</b></mark><br><br>";
+
+
+$merge = ["a1","a2","a3","a4"];
+$combine = ["b1","b2","b3","b4"];
+$c = ["c1","c2","c3","c4"];
+
+$mergeCombine = array_merge($merge,$combine,$c);
+
+echo "<pre>";
+	print_r($mergeCombine);
+echo "</pre>";
+
+
+echo '<br>....................................<br>';
+
+$mergeNew = [	'a' => "a1",
+				'b' => "a2",
+				'c' => "a3",
+				'd' => "a4"
+			];
+$combineNew = [ 'e' => ['color' => ['red','yellow','blue','green']],
+				'f' => "b2",
+				'g' => "b3",
+				'b' => "b4",
+				55,
+				58
+			];	
+
+//$mergeCombineNew = array_merge($mergeNew,$combineNew);
+//$mergeCombineNew = $mergeNew+$combineNew;
+$mergeCombineNew = array_merge_recursive($mergeNew,$combineNew);
+
+echo "<pre>";
+	print_r($mergeCombineNew);
+echo "</pre>";
+
+echo '<br>....................................<br>';
+
+$names = array("Ram","Mohan","Saly","Deny");
+$ages = array("32","15","85","24");
+
+$namesAge = array_combine($names,$ages);
+
+echo "<pre>";
+	print_r($namesAge);
+echo "</pre>";
+
+
+
+echo "<br><br><br><mark><b>...PHP Array Sorting Function...</b></mark><br><br>";
+
+$sorting = array("Ram","Mohan","Saly","Deny","Anveet");
+$sortingNew = array(25,26,85,55,89);
+$sortingA = array(	'a' => "Ram",
+					'b' => "Mohan",
+					'c' => "Saly",
+					'd' => "Deny",
+					'e' => "Anveet"
+				);
+				
+				
+///-----
+$array1 = array("Img12.png","Img10.png","img2.png","img1.png");
+
+//natsort($array1);
+natcasesort($array1);
+///-----
+
+//sort($sorting);
+//rsort($sortingNew);
+//sort($sortingA);
+//asort($sortingA);
+//arsort($sortingA);
+//ksort($sortingA);
+//krsort($sortingA);
+// array_multisort($sortingA,$sortingNew,$sorting); // value same 2/2
+//array_reverse
+
+echo "<pre>";
+	print_r($sorting);
+echo "</pre>";
+
+echo "<pre>";
+	print_r($sortingNew);
+echo "</pre>";
+
+echo "<pre>";
+	print_r($sortingA);
+echo "</pre>";
+
+echo "<pre>";
+	print_r($array1);
+echo "</pre>";
+
+
+echo "<br><br><br><mark><b>...PHP Array Traversing Function...</b></mark><br><br>";
+
+$traversing = ["one","two","three","four","five"];
+
+echo "<b>Current : </b>".current($traversing)."</br>";
+echo "<b>Key : </b>".key($traversing)."</br>";
+echo "<b>Pos : </b>".pos($traversing);
+
+echo "<br>";
+
+next($traversing);
+echo "<b>Current : </b>".current($traversing)."</br>";
+
+echo "<br>";
+
+prev($traversing);
+echo "<b>prev : </b>".current($traversing)."</br>";
+
+echo "<br>";
+
+end($traversing);
+echo "<b>prev : </b>".current($traversing)."</br>";
+echo "<b>Key : </b>".key($traversing)."</br>";
+
+echo "<br>";
+echo"<pre>";
+	print_r(each($traversing));
+echo"</pre>";
+
+
+reset($traversing);
+echo "<b>current : </b>".current($traversing)."</br>";
+
+echo "<br><br><br><mark><b>...PHP Array_Slice Function...</b></mark><br><br>";
+
+$slice = ["One","Two","Three","Four"];
+
+$newSlice = array_slice($slice, 1, 3); //use -2 1 and true
+
+echo"<pre>";
+	print_r($newSlice);
+echo"</pre>";
+
+echo "<br><br><br><mark><b>...PHP Array_Splice Function...</b></mark><br><br>";
+
+$splice = ["Awan","Polsing","Atul","Muneer"];
+$spliceNew = ["Mahendra","Bopche"];
+
+//array_splice($splice,2,1); //use -2 1 and true
+//array_splice($splice,0, 1);
+//array_splice($splice, 2,2 ,$spliceNew);
+array_splice($splice,2, count($splice),$spliceNew);
+
+
+echo"<pre>";
+	print_r($splice);
+echo"</pre>";
+
+
+echo "<br><br><br><mark><b>...PHP Array Key Functions ...</b></mark><br><br>";
+
+//$key = ["One","Two","Three","Four"];
+$key = [
+		"first" => "Red",
+		"Two" => "Blue",
+		"Three" => "Yellow",
+		"Four" => "Green"
+	];
+
+//$newKey = array_keys($key);
+//$newKey = array_key_first($key);
+//$newKey = array_key_last($key);
+
+
+$newKey = array_key_exists("first", $key);
+
+if($newKey){
+	echo "Key Exists !";
+}else{
+	echo "Key does not Exists !";
+};
+
+
+echo"<pre>";
+	print_r($newKey);
+echo"</pre>";
+
+
+echo "<br><br><br><mark><b>...PHP Array Intersect Functions...</b></mark><br><br>";
+
+
+$intersect1 = array(
+					"a" => "Red",
+					"b" => "Green",
+					"c" => "purple",
+					"d" => "Blue"
+					);
+					
+$intersect2 = array(
+					"a" => "purple",
+					"f" => "pink",
+					"d" => "orange"
+					);
+
+
+$newIntersect = array_intersect($intersect1 , $intersect2);
+
+echo"<pre>";
+	print_r($newIntersect); // case sensitive
+echo"</pre>";
+
+
+
+
+
+
+
+?> 

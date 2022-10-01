@@ -1,24 +1,145 @@
 <?php
-exit(); 
 
+function addition($aValue1, $aValue2){
+	 echo $aValue1 + $aValue2."<br>";
+}
 
-echo "<b><mark>Function</mark></b><br><br>";
- 
+addition(20,50);	
+addition(100,50);	
+
+echo "<br>";
+
+function subscription($sValue1, $sValue2){
+	echo $sValue1 - $sValue2."<br>";
+};
+
+subscription(10,2);
+subscription(1050,50);
+
+echo "<br>";
+
+function dividend($dValue1, $dValue2){
+	echo $dValue1 / $dValue2."<br>";
+}
+
+dividend(50000,4);
+dividend(15660,2);
+
+echo "<br>";
+
+function multiplication($mValue1, $mValue2){
+		echo $mValue1 * $mValue2."<br>";
+};
+
+multiplication(2,10);
+multiplication(20,5);
+
+echo "<br>";
+
 function polsing(){
 	echo "Hello Polsing Ambule<br>";
 }
 
-function salman(){
-	echo "Hello Salman Khan<br>";
-}
 
-
-polsing();
 polsing();
 echo "At-Nagpur<br>";
 polsing();
-salman();
-polsing();
+
+echo "<br><br><br><b><mark>-------------------------------------</mark></b><br><br>";
+
+function processMarks($marksArr){
+	$sum = 0;
+	foreach($marksArr as $value){
+		$sum += $value;
+	}
+	return $sum;
+}
+
+function avgMarks($marksArr){
+	$sum = 0;
+	$i = 1;
+	foreach($marksArr as $value){
+		$sum += $value;
+		$i++;
+	}
+	return $sum/$i;
+}
+
+
+$rohanDas = [34,58,15,85,12];
+//$sumMarls = processMarks($rohanDas);
+$sumMarls = avgMarks($rohanDas);
+
+$polsing = [99,55,88,70,80];
+//$sumMarksPolsing = processMarks($polsing);
+$sumMarksPolsing = avgMarks($polsing);
+
+
+echo "Total Marks Scored By ROHAN Out Of 500 is $sumMarls <br>";
+echo "Total Marks Scored By POLSING Out Of 500 is $sumMarksPolsing";
+
+echo "<br><br><br><b><mark>----------------------------------------------------------------------------------</mark></b><br><br>";
+
+
+
+
+function studentDetails($name){
+	if($name == 'Muneer Ahmad'){
+			
+		}else{
+			echo 'student name is:'.$name.'<br/>';
+	}
+}
+
+
+
+
+studentDetails('Muneer Ahmad');
+studentDetails('Ambule Singh');
+studentDetails('Talha Mubashshir');
+
+echo '<br><br>';
+
+function writeMsg() {
+  echo "Hello world!";
+}
+
+writeMsg(); // call the function
+
+echo '<br><br>';
+
+function familyName($fname) {
+  echo "$fname Refsnes.<br>";
+}
+
+familyName("Jani");
+familyName("Hege");
+familyName("Stale");
+familyName("Kai Jim");
+familyName("Borge");
+
+echo '<br><br>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo "<b><mark>Function</mark></b><br><br>";
+ 
+
 
 
 
